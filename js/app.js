@@ -6,7 +6,7 @@ define(['angular','router'],function(){
 			controller : $controllerProvider.register,
 			//同样的，这里也可以保存directive／filter／service的引用
 			directive: $compileProvider.directive,
-			filter: $compileProvider.register,
+			filter: $filterProvider.register,
 			service: $provide.service
 		};
 	})

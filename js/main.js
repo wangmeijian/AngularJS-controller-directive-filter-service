@@ -17,7 +17,6 @@ require.config({
 		}
 	}
 })
-var register_providers = {};
 // 初始化myModule模块
 require(['app'],function(){
 	angular.bootstrap(document, ['myModule'])		
