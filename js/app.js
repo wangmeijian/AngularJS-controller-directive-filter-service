@@ -16,7 +16,10 @@ define(['angular','router'],function(){
 	.state("home",{
 		url:"/home",
 		controller: 'homeCtrl',
-		template: '<p>{{str}}</p>',
+		template: '<p>{{str}}</p><br/>'+
+                    '过滤器应用：<span>{{sex | sexFilter}}</span><br/><br/>'+
+                    'Service应用：<span ng-repeat="book in books">{{book.id + 1}}：《{{book.name}}》</span><br/><br/>'+
+                    '指令应用：<my-directive></my-directive>',
         resolve: {
             loadCtrl: ["$q", function($q) { 
             	var deferred = $q.defer();
@@ -31,7 +34,7 @@ define(['angular','router'],function(){
 	.state("local",{
 		url:"/local",
 		controller: 'localCtrl',
-		template: '<p>{{str}}</p>',
+		template: '<p>{{str}}</p><br/>',
         resolve: {
             loadCtrl: ["$q", function($q) { 
             	var deferred = $q.defer();
